@@ -1,0 +1,172 @@
+:root {
+  --modal-bg: rgba(0, 0, 0, 0.5);
+  --bg: #fff;
+  --text: #333;
+  --primary: #007bff;
+  --danger: #dc3545;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --toast-bg: #333;
+  --toast-text: #fff;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  color: var(--text);
+  margin: 0; padding: 1rem;
+}
+
+h1, h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.upload, .files {
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  background-color: white;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+input[type="file"] {
+  margin-right: 1rem;
+}
+
+button {
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  border: none;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+}
+
+.btn-danger {
+  background-color: var(--danger);
+  color: white;
+}
+
+.btn-secondary {
+  background-color: var(--secondary);
+  color: white;
+}
+
+/* Tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: #f1f3f5;
+}
+
+/* Modales */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: var(--modal-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+.modal-content {
+  background-color: var(--bg);
+  color: var(--text);
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  animation: fadeInRow 0.3s ease forwards;
+}
+.upload form button {
+  background-color: #4CAF50; /* Verde */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.upload form button:hover {
+  background-color: #45a049; /* Verde más oscuro al pasar el mouse */
+}
+
+.modal-buttons {
+  margin-top: 1rem;
+}
+
+.modal-buttons button {
+  margin: 0 0.3rem;
+}
+
+/* Animación */
+@keyframes fadeInRow {
+  from {opacity: 0; transform: translateY(-10px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* Toasts */
+.toast-container {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 11000;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 320px;
+}
+
+.toast {
+  background-color: var(--toast-bg);
+  color: var(--toast-text);
+  padding: 0.75rem 1.2rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  font-weight: 600;
+  opacity: 0.95;
+  animation: slideIn 0.3s ease forwards;
+}
+
+.toast-success {
+  background-color: var(--success);
+}
+
+.toast-error {
+  background-color: var(--danger);
+}
+
+.toast-info {
+  background-color: var(--info);
+}
+
+@keyframes slideIn {
+  from {opacity: 0; transform: translateX(100%);}
+  to {opacity: 0.95; transform: translateX(0);}
+}
