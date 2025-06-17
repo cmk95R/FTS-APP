@@ -122,7 +122,7 @@ Luego de confirmar la eliminacion en nuestro modal se nos eliminar el archivo se
 
 ![image](https://github.com/user-attachments/assets/39adefe7-cc2d-4e1c-9292-babccdb8515c)
 
-🙌 Agradecimientos y cierre
+
 Gracias por visitar este repositorio.
 FTSApp fue desarrollado como parte del Trabajo Práctico Final para la materia Programación sobre redes  en el marco de la Tecnicatura en Desarrollo de Software.
 
